@@ -7,7 +7,7 @@ bot = Cinch::Bot.new do
     c.realname = "db"
     c.user = "db"
     c.server = "irc.amazdong.com"
-    c.channels = ["#boys"]
+    c.channels = ["#interns"]
     c.verbose = true
     #c.reconnect = true
   end
@@ -17,7 +17,7 @@ bot = Cinch::Bot.new do
       @markov ||= begin
         dictionary = MarkyMarkov::Dictionary.new('dictionary', 3)
         %w{
-          ulysses venusinfurs 50shades
+          ulysses 50shades
         }.each {|corpus| dictionary.parse_file "corpus/#{corpus}.txt" }
         dictionary.save_dictionary!
         dictionary
