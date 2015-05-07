@@ -7,7 +7,9 @@ bot = Cinch::Bot.new do
     c.realname = "db"
     c.user = "db"
     c.server = "irc.amazdong.com"
-    c.channels = ["#interns"]
+    c.channels = ["#interns", "#ssl"]
+    #c.server = "irc.darchoods.net"
+    #c.channels = ["#thunked"]
     c.verbose = true
     #c.reconnect = true
   end
@@ -55,11 +57,11 @@ bot = Cinch::Bot.new do
 
     save_dictionary if rand(100) < 10
 
-    m.reply(response_for m.message) if rand(100) < 5
+    #m.reply(response_for m.message) if rand(100) < 5
   end
 
   on :message, /db/i do |m|
-    m.reply(response_for m.message) if rand(100) < 80
+    m.reply(response_for m.message) if rand(100) < 8
   end
 end
 
